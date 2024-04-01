@@ -7,13 +7,13 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@Entity
-@Table(name="lecture")
 @Data
 @EqualsAndHashCode(callSuper=true)
 @AllArgsConstructor
 @SuperBuilder
 @NoArgsConstructor
+@Entity
+@Table(name="lecture")
 public class Lecture extends BaseEntity{
     private String name;
     @ManyToOne

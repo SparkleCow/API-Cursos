@@ -11,7 +11,9 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+//Indicamos que el patron builder en clases hijas seran implementadas con atributos de esta clase.
 @SuperBuilder
+//Indica que esta clase sera una clase padre de otras clases del proyecto.
 @MappedSuperclass
 public class BaseEntity {
     @Id

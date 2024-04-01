@@ -9,12 +9,15 @@ import lombok.experimental.SuperBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Data
+/*Cuando se lleva a cabo herencia no basta con la anotación data de lombok. Es necesario implementar
+EqualsAndHasCode haciendo una llamada a la clase padre. */
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
+//SuperBuilder permite tener el patron de diseño builder con los atributos de la clase padre.
 @SuperBuilder
+@Entity
 @Table(name = "author")
 public class Author extends BaseEntity{
 

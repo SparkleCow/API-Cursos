@@ -10,13 +10,13 @@ import lombok.experimental.SuperBuilder;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name="courses")
 @Data
 @EqualsAndHashCode(callSuper=true)
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name="courses")
 public class Course extends BaseEntity{
     private String title;
     private String description;

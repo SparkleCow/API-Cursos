@@ -1,4 +1,4 @@
-package com.sparklecow.curso.entities;
+package com.sparklecow.curso.entities.academy;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ EqualsAndHasCode haciendo una llamada a la clase padre. */
 @SuperBuilder
 @Entity
 @Table(name = "author")
-public class Author extends BaseEntity{
+public class Author extends BaseEntity {
 
     private String firstName;
     private String lastName;

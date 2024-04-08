@@ -1,4 +1,4 @@
-package com.sparklecow.curso.entities;
+package com.sparklecow.curso.entities.academy;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

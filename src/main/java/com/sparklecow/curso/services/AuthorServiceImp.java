@@ -1,6 +1,6 @@
 package com.sparklecow.curso.services;
 
-import com.sparklecow.curso.entities.Author;
+import com.sparklecow.curso.entities.academy.Author;
 import com.sparklecow.curso.repositories.AuthorRepository;
 import jakarta.persistence.NoResultException;
 import lombok.RequiredArgsConstructor;

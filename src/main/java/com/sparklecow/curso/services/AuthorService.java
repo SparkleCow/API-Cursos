@@ -1,6 +1,6 @@
 package com.sparklecow.curso.services;
 
-import com.sparklecow.curso.entities.Author;
+import com.sparklecow.curso.entities.academy.Author;
 
 public interface AuthorService extends CrudService<Author, Author>{
     Iterable<Author> findByFirstName(String firstName);

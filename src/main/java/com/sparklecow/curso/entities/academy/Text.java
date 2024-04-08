@@ -1,4 +1,4 @@
-package com.sparklecow.curso.entities;
+package com.sparklecow.curso.entities.academy;
 
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -13,6 +13,6 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class File extends Resource{
-    private String type;
+public class Text extends Resource{
+    private String content;
 }

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cursos
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 50MB
+
+springdoc:
+  default-produces-media-type:
+
+server:
+  servlet:
+    context-path: /api/v1
+  port: 8080
+

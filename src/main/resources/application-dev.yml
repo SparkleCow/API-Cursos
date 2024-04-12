@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Cursos
+    username: username
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgres
+    database-platform: org.hibernate.dialect.PostgresSQLDialect
+  mail:
+    host: localhost
+    port: 1018
+    username: sparklecow
+    password: sparklecow
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true

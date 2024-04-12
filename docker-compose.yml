@@ -1,0 +1,32 @@
+services:
+  postgres:
+    container_name: postgres_sql
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: username
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: Cursos
+    volumes:
+      - cursos:/data/postgres
+    networks:
+      - curso_network
+    restart: unless-stopped
+
+
+  mailDev:
+    container_name: mail_dev
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+
+networks:
+  curso_network:
+    driver: bridge
+
+volumes:
+  cursos:
+    driver: local

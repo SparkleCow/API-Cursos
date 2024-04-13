@@ -23,3 +23,15 @@ spring:
         smtp:
           trust: "*"
         auth: true
+        starttls:
+          enable: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      secret_key: 6ed1eb0150e8f8fb285ec976ce500807406933985fbea5086c690eb221e53f5a
+      expiration: 8640000
+

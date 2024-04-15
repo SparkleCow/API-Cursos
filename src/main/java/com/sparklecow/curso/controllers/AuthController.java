@@ -3,6 +3,7 @@ package com.sparklecow.curso.controllers;
 import com.sparklecow.curso.entities.user.dto.UserRequestDto;
 import com.sparklecow.curso.services.AuthenticationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class AuthController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<?> register(@RequestBody @Valid UserRequestDto userRequest) {
+    public ResponseEntity<?> register(@RequestBody @Valid UserRequestDto userRequest) throws MessagingException {
         authenticationService.register(userRequest);
         return ResponseEntity.accepted().build();
     }

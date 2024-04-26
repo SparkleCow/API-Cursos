@@ -15,7 +15,6 @@ services:
       - curso_network
     restart: unless-stopped
 
-
   mailDev:
     container_name: mail_dev
     image: maildev/maildev

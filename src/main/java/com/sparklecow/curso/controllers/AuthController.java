@@ -1,5 +1,6 @@
 package com.sparklecow.curso.controllers;
 
+import com.sparklecow.curso.entities.user.dto.AuthenticationRequestDto;
 import com.sparklecow.curso.entities.user.dto.UserRequestDto;
 import com.sparklecow.curso.services.AuthenticationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,5 +25,16 @@ public class AuthController {
     public ResponseEntity<?> register(@RequestBody @Valid UserRequestDto userRequest) throws MessagingException {
         authenticationService.register(userRequest);
         return ResponseEntity.accepted().build();
+    }
+
+    @PostMapping("/authenticate")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<?> authenticate(@RequestBody @Valid AuthenticationRequestDto authenticationRequestDto){
+        return ResponseEntity.ok(authenticationService.authenticate(authenticationRequestDto));
+    }
+
+    @GetMapping("/activate-account")
+    public void activateAccount(@RequestParam String token) throws MessagingException {
+        authenticationService.activateAccount(token);
     }
 }
